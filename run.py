@@ -1,3 +1,23 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+score =[]
+
+print("Question 1:")
+while True:
+    try:
+        answer1 = float(input("Enter your first number:\n"))
+    except ValueError:
+        print("\nWhat you have entered is not a valid number, try again.")
+    else:
+        score.append(answer1)
+        break 
+print("Question 2:")
+while True:
+    try:
+        answer2 = float(input("Enter your first number:\n"))
+    except ValueError:
+        print("\nWhat you have entered is not a valid number, try again.")
+    else:
+        score.append(answer2)
+        break 
+
+print(score)   
+
