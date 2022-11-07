@@ -24,16 +24,29 @@ while True:
 total = sum(score)
 print(total)
 
-def result(value): 
-    if int(value) == range(1, 3): 
+def result(number): 
+
+    result = int(number)
+
+    if result <= 10: 
+        print("yes")
+    elif result <= 17: 
+        print("no")
+    else: 
+        print("maybe baby")
+
+    """
+    if int(number) >= 1 and int(number) >= 10: 
         print("cold")
-    elif int(value) == range(3, 6): 
+    elif int(number) >= 10 and int(number) >= 20: 
         print("warrior")
     else: 
         print("hottie")
 
-# person = result(total)
-# print(result)
+    """
+
+person = result(total)
+print(result)
     
     
 
