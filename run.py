@@ -1,45 +1,42 @@
-score =[]
 
-print("Question 1:")
-while True:
-    try:
-        answer1 = int(input("Enter your first number:\n"))
-    except ValueError:
-        print("\nWhat you have entered is not a valid number, try again.")
-    else:
-        if answer1 <= 10:
-            score.append(answer1)
-        else: 
-            raise ValueError("Input needs to be under 10")   
-        break 
-print("Question 2:")
-while True:
-    try:
-        answer2 = float(input("Enter your first number:\n"))
-    except ValueError:
-        print("\nWhat you have entered is not a valid number, try again.")
-    else:
-        score.append(answer2)
-        break 
+def quizz(): 
+    """ 
+    The function that holds all questions, 
+    keeps track of score
+    """
+    score = []
 
-print("Question3") 
+    print("When your partner would lie to you would you be angry?:")
+    while True:
+        try:
+            answer1 = int(input("Put in a number between 1=Never and 10=Always:\n"))
+        except ValueError:
+            print("\nWhat you have entered is not a valid number, try again.")
+        else:
+            score.append(answer1) 
+            break 
+    print("Question 2:")
+    while True:
+        try:
+            answer2 = float(input("Put in a number between 1=Never and 10=Always:\n"))
+        except ValueError:
+            print("\nWhat you have entered is not a valid number, try again.")
+        else:
+            score.append(answer2)
+            break 
 
-while True:
-    answer3 = int(input("type here:"))
-    if answer3 >= 11 : 
-        raise ValueError("number must be under 10:")
-    else: 
-        print("well done:")
+    total = sum(score)
+    print(total) 
         
 
-score.append(answer3)
-
-total = sum(score)
-print(total)
 
 def result(number): 
+    """ 
+    Calculate the total score, 
+    print right anger-type
+    """
 
-    result = int(number)
+    result = float((number))
 
     if result <= 10: 
         print("yes")
@@ -49,24 +46,27 @@ def result(number):
         print("maybe baby")
 
 
-person = result(total)
-print(result)
+total_score= quizz()
+person = result(total_score)
+print(person)
 
 
-def ask_for_contact(): 
-    """ 
-    Ask for personal contact details, 
-    and push them to a sheet 
-    """
 
-    print("would you like to recieve news on angermanagement training? leave us your details.")
-    input("yes/no")
-    name = input("Your Name is: ")
-    phone= input("Your phone number is:")
-    mail = input("email is:")
-    print(f"Thank you {name} we will ring you soon at {phone}")
 
-ask_for_contact()
+#def story(): 
+
+"""
+Make a story with user input
+""" 
+
+    #name= input("Type a name:")
+    #object = input("type an object: ")
+    #day = input("type a day")
+
+    #print(f"when {name} was picking up an {object} just because it was {day}")
+
+
+
 
 
 
