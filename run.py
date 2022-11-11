@@ -8,8 +8,7 @@ def introduction():
     name = input("Enter your name:\n ")
     print(f"Hi there, {name} welcome to our anger-personality-test\n")
     print("You will be asked a set of questions and your answer will need to be a number on the scale of 10")
-    print("Make sure not to type in a number higher than 10 or your results will be inaccurate")
-    print("If at any time you would like to start over just click the Run Program button above the terminal ")
+    print("If at any time you would like to exit, just press q")
     return name
 
 
@@ -75,6 +74,8 @@ def get_answer(quest):
         if answer.isdigit() and 1 <= int(answer) <= 10:
             return int(answer)
             break
+        elif answer == "q": 
+            exit()
         else:
             print("This is not a valid input")
       
