@@ -113,6 +113,8 @@ def main():
     total_score = quizz()
     person = result(total_score)
     print(person)
+    print(f"Your total score was {total_score} {user}. Can we safe these results to our statistics?")
+
     
 
 main()
