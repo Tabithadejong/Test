@@ -27,6 +27,7 @@ def quizz():
 
     total = sum(score)
     print(total) 
+    return total 
         
 
 
@@ -35,15 +36,18 @@ def result(number):
     Calculate the total score, 
     print right anger-type
     """
+    cool = "The coolest"
+    warrior = "Neutral"
+    hothead = "angry"
 
-    result = float((number))
+   
 
-    if result <= 10: 
-        print("yes")
-    elif result <= 17: 
-        print("no")
+    if int(number) <= 10: 
+        return cool
+    elif int(number) <= 17: 
+        return warrior
     else: 
-        print("maybe baby")
+        return hothead
 
 
 total_score= quizz()
