@@ -1,3 +1,37 @@
+def introduction(): 
+    """ 
+    Displays a little introduction, 
+    build a string litteral and, 
+    ask if the person would like to start the game
+    """ 
+
+    name = input("Enter your name: ")
+    print(f" Hi there {name} welcome to our anger-personality-test\n")
+    print("You will be asked a set of questions and your answer will need to be a number on the scale of 10")
+    print("Make sure not to type in a number higher than 10 or your results will be inaccurate")
+    print("If at any time you would like to start over just click the Run Program button above the terminal ")
+    begin()
+
+
+def begin():
+    """ 
+    Asks the player if he/she wants to start the game
+    """ 
+
+    print("Are you ready to find out your angertype?")
+
+    start = input(" y/n :")
+    
+    if start == "y": 
+        print("Great well let's go\n")
+        total_score= quizz()
+    elif start == "n" : 
+        print(" Thats too bad, if you cange your mind let us know!")
+    else: 
+        print("Oh Oh, that is not a valid input")
+        begin()
+
+
 
 def quizz(): 
     """ 
@@ -5,7 +39,8 @@ def quizz():
     plus builds a list for score. 
     """
     score = []
-    questions = ("Q1", " Q2", " Q3", " Q4", " Q5",)
+    questions = ("When your friend annoys you, do you tell him/her?:",
+     " Q2", " Q3", " Q4", " Q5",)
 
     for q in questions: 
         value = get_answer(q)
@@ -17,6 +52,7 @@ def quizz():
 def get_answer(quest): 
 
     """ 
+    Prints the question.
     Checks the input to be a number, 
     if not raise a type error and if correct,
     returns the number
@@ -60,7 +96,7 @@ def main():
     Calls all the main functions for the game
     """
 
-    total_score= quizz()
+    introduction()
     person = result(total_score)
     print(person)
 
@@ -70,17 +106,9 @@ main()
 
 
 
-#def story(): 
 
-"""
-Make a story with user input
-""" 
 
-    #name= input("Type a name:")
-    #object = input("type an object: ")
-    #day = input("type a day")
 
-    #print(f"when {name} was picking up an {object} just because it was {day}")
 
 
 
