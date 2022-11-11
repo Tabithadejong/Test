@@ -104,6 +104,20 @@ def result(number):
     else: 
         return off_chart
 
+def store_data(val1, val2): 
+
+    """ 
+    Make the results into a dictionary. 
+    This way it can be stored in external sheets
+    """
+    keys = val1
+    val= val2
+    data = dict(zip(keys, val))
+    print(data)
+    
+
+
+
 def main(): 
     """ 
     Calls all the main functions for the game
@@ -114,7 +128,8 @@ def main():
     total_score = quizz()
     person = result(total_score)
     print(person)
-    print(f"Your total score was {total_score} {user}. Can we safe these results to our statistics?")
+    dict_atr = 
+    store_data(user,dict_atr)
 
     
 
