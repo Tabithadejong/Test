@@ -41,7 +41,7 @@ def begin():
 
     print("Are you ready to find out your [bold orange3]ANGER TYPE?[/]")
 
-    start = input(" y/n :")
+    start = input(" y/n :\n")
     
     if start == "y": 
         print("Great well let's go\n")
@@ -110,7 +110,7 @@ def result(number):
     print right anger-type
     """
 
-    cool = "[bold bright_cyan]Wow it seems like you are as COOL as ICECREAM.\nEven though it is great to be in control nobody likes to relate to a statue\nAlso your anger is the force for change, don't let it die![/]"
+    cool = "[bold bright_cyan]Wow it seems that you are as COOL as ICECREAM.\nEven though it is great to be in control nobody likes to relate to a statue\nAlso your anger is the force for change, don't let it die![/]"
     warrior = "[bold green]You seem to have a WARRIOR-LIKE state of mind.\nYou know when to lose your cool to address, that what needs change.\nBut you also know when to control your emotion to adjust to the situation.[/]"
     hothead = "[bold red]You are overheated most of the time, we could call you DYNAMITE.\nBring back the 10 second count before expressing your anger![/]"
     
@@ -138,7 +138,7 @@ def store_data(val1, val2):
 
     while True:
         print("\nCan we store these results for our statistics?") 
-        permission = input("y/n : ")
+        permission = input("y/n :\n ")
         if permission == "y":
             to_update.append_row(data)
             print("Thank you and have a great day!")
@@ -167,8 +167,6 @@ def main():
     print(person)
     store_data(user, total_score)
     
-    
-
     
 main()
 
