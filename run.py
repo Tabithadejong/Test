@@ -12,9 +12,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("anger-test-results")
 
-page = SHEET.worksheet("results")
-data = page.get_all_values()
-print(data)
+
 
 def introduction(): 
     """ 
@@ -24,7 +22,7 @@ def introduction():
     """ 
 
     name = input("Enter your name:\n ")
-    print(f"Hi there, {name} welcome to our anger-personality-test\n")
+    print(f"Hi there {name} , welcome to our anger-personality-test\n")
     print("You will be asked a set of questions and your answer will need to be a number on the scale of 10")
     print("If at any time you would like to exit, just press q")
     return name
@@ -107,7 +105,7 @@ def result(number):
     """
 
     cool = "Wow it seems like you are as cool as icecream. Even though it is great to be in control nobody likes to relate to a statue\nAlso your anger is the force for change, don't let it die!"
-    warrior = "You seem to have a warrior like state of mind. You know when to lose your cool to address, that what needs change.\nBut you also know when to control your emotion to adjust to the situation."
+    warrior = "You seem to have a warrior-like state of mind. You know when to lose your cool to address, that what needs change.\nBut you also know when to control your emotion to adjust to the situation."
     hothead = "You are overheated most of the time, we could call you dynamite. Bring back the 10 second count before expressing your anger!"
     off_chart = "Ooops, your score seems to be off the charts. Did you type in numbers higher than 10?\nPress Run Game above the terminal and let's start all the way from the top!"
 
@@ -128,6 +126,25 @@ def store_data(val1, val2):
     Make the results into a dictionary. 
     This way it can be stored in external sheets
     """
+    data = []
+    data.append(val1)
+    data.append(val2)
+    to_update = SHEET.worksheet("results")
+
+    while True:
+        print("\nCan we store these results for our statistics?") 
+        permission = input("y/n : ")
+        if permission == "y":
+            to_update.append_row(data)
+            print("Thank you!")
+            break
+        elif permission == "n": 
+            print("Okay we will not store your results.")
+            print("Have a good day!")
+            break
+        else: 
+            print("sorry not a valid input")
+
     
     
 
@@ -143,12 +160,13 @@ def main():
     total_score = quizz()
     person = result(total_score)
     print(person)
+    store_data(user, total_score)
     
-    store_data(user,dict_atr)
+    
 
     
 
-# main()
+main()
 
 
 
