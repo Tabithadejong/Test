@@ -1,11 +1,5 @@
 import gspread
 from google.oauth2.service_account import Credentials
-import rich
-from rich import print
-
-
-
-
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
