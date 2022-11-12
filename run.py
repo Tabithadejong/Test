@@ -1,6 +1,12 @@
 import gspread
 from google.oauth2.service_account import Credentials
 
+from rich import print
+
+
+
+
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -22,9 +28,9 @@ def introduction():
     """ 
 
     name = input("Enter your name:\n ")
-    print(f"Hi there {name} , welcome to our anger-personality-test\n")
+    print(f"Hi there [bold purple]{name}[/] , welcome to our [bold orange3]Anger-Personality-Test[/]\n")
     print("You will be asked a set of questions and your answer will need to be a number on the scale of 10")
-    print("If at any time you would like to exit, just press q")
+    print("If at any time you would like to [red1]exit[/], just press [red1]q[/]")
     return name
 
 
@@ -33,7 +39,7 @@ def begin():
     Asks the player if he/she wants to start the game
     """ 
 
-    print("Are you ready to find out your angertype?")
+    print("Are you ready to find out your [bold orange3]ANGER TYPE?[/]")
 
     start = input(" y/n :")
     
@@ -43,7 +49,7 @@ def begin():
         print("Thats too bad, if you cange your mind let us know!")
         main()
     else: 
-        print("Oh Oh, that is not a valid input")
+        print("[white on red]Oh Oh, that is not a valid input[/]")
         begin()
 
 
@@ -55,14 +61,14 @@ def quizz():
     The loop will display the questions and answer input
     """
     score = []
-    questions = ("When your friend annoys you, do you tell him/her?:",
-     "When the waiter is rude, do you complain?", 
-     "When the food comes out different than you ordered, will you send it back? ",
-      "Do you get frustrated while driving?",
-       "Would you tell the truth even when it will hurt? ",
-       "When your employer tells you to be quiet, would you listen?",
-       "When a customer is behaving like a spoiled brat, would you point this out? ",
-       "Do you have arguments with your peers often? ")
+    questions = ("[bold black on light_salmon1] When your friend annoys you, do you tell him/her? [/]",
+     "[bold black on light_salmon1] When the waiter is rude, do you complain? [/]", 
+     "[bold black on light_salmon1] When the food comes out different than you ordered, will you send it back? [/]",
+      "[bold black on light_salmon1] Do you get frustrated while driving? [/]",
+       "[bold black on light_salmon1] Would you tell the truth even when it will hurt? [/] ",
+       "[bold black on light_salmon1] When your employer gives you a useless assignment, would you refuse? [/]",
+       "[bold black on light_salmon1] When a customer is behaving like a spoiled brat, would you point this out? [/] ",
+       "[bold black on light_salmon1] Do you have arguments with your peers often? [/]")
 
     for q in questions: 
         value = get_answer(q)
@@ -93,7 +99,7 @@ def get_answer(quest):
         elif answer == "q": 
             exit()
         else:
-            print("This is not a valid input")
+            print("[white on red]Oh oh, that is not a valid input[/]")
       
 
 
@@ -104,27 +110,26 @@ def result(number):
     print right anger-type
     """
 
-    cool = "Wow it seems like you are as cool as icecream. Even though it is great to be in control nobody likes to relate to a statue\nAlso your anger is the force for change, don't let it die!"
-    warrior = "You seem to have a warrior-like state of mind. You know when to lose your cool to address, that what needs change.\nBut you also know when to control your emotion to adjust to the situation."
-    hothead = "You are overheated most of the time, we could call you dynamite. Bring back the 10 second count before expressing your anger!"
-    off_chart = "Ooops, your score seems to be off the charts. Did you type in numbers higher than 10?\nPress Run Game above the terminal and let's start all the way from the top!"
-
+    cool = "[bold bright_cyan]Wow it seems like you are as COOL as ICECREAM.\nEven though it is great to be in control nobody likes to relate to a statue\nAlso your anger is the force for change, don't let it die![/]"
+    warrior = "[bold green]You seem to have a WARRIOR-LIKE state of mind.\nYou know when to lose your cool to address, that what needs change.\nBut you also know when to control your emotion to adjust to the situation.[/]"
+    hothead = "[bold red]You are overheated most of the time, we could call you DYNAMITE.\nBring back the 10 second count before expressing your anger![/]"
+    
     print("\nCalculating your angertype.....\n")
 
     if int(number) <= 24: 
         return cool
     elif int(number) <= 56: 
         return warrior
-    elif int(number) <= 81:
+    else:
         return hothead
-    else: 
-        return off_chart
+    
 
 def store_data(val1, val2): 
 
     """ 
-    Make the results into a dictionary. 
-    This way it can be stored in external sheets
+    Ask's the user if their name and test results can be stored. 
+    When the answer is yes, the data will be pushed to, 
+    an external google sheet. 
     """
     data = []
     data.append(val1)
@@ -136,14 +141,14 @@ def store_data(val1, val2):
         permission = input("y/n : ")
         if permission == "y":
             to_update.append_row(data)
-            print("Thank you!")
+            print("Thank you and have a great day!")
             break
         elif permission == "n": 
             print("Okay we will not store your results.")
             print("Have a good day!")
             break
         else: 
-            print("sorry not a valid input")
+            print("[white on red]Oh oh that is not a valid input[/]")
 
     
     
@@ -165,8 +170,12 @@ def main():
     
 
     
-
 main()
+
+
+
+
+
 
 
 
