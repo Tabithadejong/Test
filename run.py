@@ -1,6 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
-
+import rich
 from rich import print
 
 
@@ -28,7 +28,7 @@ def introduction():
     """ 
 
     name = input("Enter your name:\n ")
-    print(f"Hi there [bold purple]{name}[/] , welcome to our [bold orange3]Anger-Personality-Test[/]\n")
+    print(f"Hi there [bold purple]{name}[/], welcome to our [bold orange3]Anger-Personality-Test[/]\n")
     print("You will be asked a set of questions and your answer will need to be a number on the scale of 10")
     print("If at any time you would like to [red1]exit[/], just press [red1]q[/]")
     return name
@@ -41,7 +41,7 @@ def begin():
 
     print("Are you ready to find out your [bold orange3]ANGER TYPE?[/]")
 
-    start = input(" y/n :\n")
+    start = input("y/n :\n")
     
     if start == "y": 
         print("Great well let's go\n")
@@ -65,7 +65,7 @@ def quizz():
      "[bold black on light_salmon1] When the waiter is rude, do you complain? [/]", 
      "[bold black on light_salmon1] When the food comes out different than you ordered, will you send it back? [/]",
       "[bold black on light_salmon1] Do you get frustrated while driving? [/]",
-       "[bold black on light_salmon1] Would you tell the truth even when it will hurt? [/] ",
+       "[bold black on light_salmon1] Would you tell the truth even when it will hurt people? [/] ",
        "[bold black on light_salmon1] When your employer gives you a useless assignment, would you refuse? [/]",
        "[bold black on light_salmon1] When a customer is behaving like a spoiled brat, would you point this out? [/] ",
        "[bold black on light_salmon1] Do you have arguments with your peers often? [/]")
@@ -140,11 +140,12 @@ def store_data(val1, val2):
         print("\nCan we store these results for our statistics?") 
         permission = input("y/n :\n ")
         if permission == "y":
+            print("\nLogging your results...")
             to_update.append_row(data)
-            print("Thank you and have a great day!")
+            print("\nThank you for taking the test, and have a great day!")
             break
         elif permission == "n": 
-            print("Okay we will not store your results.")
+            print("\nOkay we will not store your results.")
             print("Have a good day!")
             break
         else: 
