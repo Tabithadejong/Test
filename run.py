@@ -1,3 +1,21 @@
+import gspread
+from google.oauth2.service_account import Credentials
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file("creds.json")
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open("anger-test-results")
+
+page = SHEET.worksheet("results")
+data = page.get_all_values()
+print(data)
+
 def introduction(): 
     """ 
     Displays a little introduction, 
@@ -110,10 +128,7 @@ def store_data(val1, val2):
     Make the results into a dictionary. 
     This way it can be stored in external sheets
     """
-    keys = val1
-    val= val2
-    data = dict(zip(keys, val))
-    print(data)
+    
     
 
 
@@ -128,12 +143,12 @@ def main():
     total_score = quizz()
     person = result(total_score)
     print(person)
-    dict_atr = 
+    
     store_data(user,dict_atr)
 
     
 
-main()
+# main()
 
 
 
