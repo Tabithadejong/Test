@@ -1,31 +1,53 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Anger Type Personality Test 
+This Anger Type Personality test is a Python terminal, which runs in the Code Institute mock terminal on Heroku. 
+It is a questionary which will track the user input to find out how the relate to anger within themselves. 
 
-Welcome Tabithadejong,
+[Here is the link to the deployed project]("")
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
-## Reminders
+## How it works
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+The questionary is a list of day to day examples of situations that might trigger ones anger or frustration. The user is asked to answer to think about what they would do in these situations. All the questions are scale questions, meaning the user needs to put in a number on the scale of 10 depended on their reaction to the sketched situation. The program will keep track of their score and will reveal their behavioral pattern at the end of the questionary. 
 
-## Creating the Heroku app
+![Picture of the terminal in action] ()
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Features 
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Existing Features 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- A welcome message with user input to address the user personal
+![picture of welcome messag]()
+- The option to start the game 
+![picture of commence message]()
+- The quistionary form with 8 scale questions
+![picture of questions]()
+- User input througout the form to have the user really interact with the program
+  - Keeping track of user input and adding it to scores
+  - Checking user input for validity
+  - When input does not meet requierments an error message will be thrown 
+  ![picture of error message]()
+  - At any given time while answering questions the user has the option to exit the form
+  ![picture of q option]()
+- Personal result display
+  - The result is styled according to the score of the user
+- Storage of the results after permission
+  - There is an option to reject storage
+  - When agreed to storage the results will be logged to an external sheet
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
+### Future Features 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+In the near future it would be an option to ask for contact details from each user. According to their results different offer could be made to them personally. Anger management courses or rather emotional expression training are fitting services to offer. 
 
------
-Happy coding!
+## Data Model 
+
+The data input is requested in the terminal. Then the data is stored and analysed in the background. The end results and user name are highlighted and pushed to an external google sheet. This way numerous analytics can be done on the results. 
+
+## Testing 
+### Bugs 
+#### Fixed Bugs 
+#### Unfixed Bugs 
+### Validator Testing 
+## Deployment 
+## Credits 
