@@ -58,7 +58,7 @@ def quizz():
     The loop will display the questions and answer input
     """
     score = []
-    questions = ("[bold black on light_salmon1] When your friend annoys you, do you tell him/her? [/]",
+    questions = ("[bold black on light_pink1] When your friend annoys you, do you tell him/her? [/]",
      "[bold black on light_pink1] When the waiter is rude, do you complain? [/]", 
      "[bold black on light_pink1] When the food comes out different than you ordered, will you send it back? [/]",
       "[bold black on light_pink1] Do you get frustrated while driving? [/]",
