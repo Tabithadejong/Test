@@ -12,7 +12,6 @@ This is presented in a Mock terminal by Code Institute.
  
 The questionnaire is a list of day to day examples of situations that might trigger one's anger or frustration. The user is asked to think about what they would do in these situations. All the questions are scale questions, meaning the user needs to put in a number on the scale of 10 depending on their reaction to the sketched situation. The program will keep track of their score and will reveal their behavioral pattern at the end of the questionnaire.
  
-![Picture of the terminal in action](/Project%203/in-action.png)
  
 ## Features
  
@@ -22,7 +21,7 @@ The questionnaire is a list of day to day examples of situations that might trig
 - A welcome message with user input to address the user personal
 ![picture of welcome message](/Project%203/welcome-message.png)
 - Explanation of the game and option to start
-![picture of commence message]()
+![picture of commence message](/Project%203/want-to-start.png)
 - The questionnaire form with 8 scale questions
 ![picture of questions](/Project%203/question-example.png)
 - User input throughout the form to have the user really interact with the program
@@ -104,7 +103,7 @@ This project was deployed using Code Institute's mock terminal for Heroku
 - Slack channel where fellow students would help troubleshoot during denial of rich module after deployment
 - [Website for color pallet to be used with rich import]("https://rich.readthedocs.io/en/stable/appendix/colors.html")
 - The snippet of code that helped me check for range of input and type of input at the same time;
-[Link to stack-overflow]("https://stackoverflow.com/questions/19821273/limiting-user-input-to-a-range-in-python")
+[Link to stack-overflow](https://stackoverflow.com/questions/19821273/limiting-user-input-to-a-range-in-python)
 ![picture of the code snippet](/Project%203/code-snippet.png)
  
 

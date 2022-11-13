@@ -17,6 +17,7 @@ SHEET = GSPREAD_CLIENT.open("anger-test-results")
 
 
 def introduction(): 
+
     """ 
     Displays a little introduction, 
     build a string litteral and, 
@@ -32,6 +33,7 @@ def introduction():
 
 
 def begin():
+
     """ 
     Asks the player if he/she wants to start the game
     """ 
@@ -52,6 +54,7 @@ def begin():
 
 
 def quizz(): 
+    
     """ 
     The function that holds all questions, 
     also builds a list for score. 
