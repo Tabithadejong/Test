@@ -38,16 +38,63 @@ The questionary is a list of day to day examples of situations that might trigge
 
 ### Future Features 
 
-In the near future it would be an option to ask for contact details from each user. According to their results different offer could be made to them personally. Anger management courses or rather emotional expression training are fitting services to offer. 
+In the near future it would be an option to ask for contact details from each user. According to their results different offers could be made to them personally. Anger management courses or rather emotional expression training for example. These marketing strategies can be markted with or through a third party.
 
 ## Data Model 
 
 The data input is requested in the terminal. Then the data is stored and analysed in the background. The end results and user name are highlighted and pushed to an external google sheet. This way numerous analytics can be done on the results. 
 
 ## Testing 
+
+The personality test has been through extensive testing in the following ways. 
+- Linter testing in the local terminal
+- The deployed Heroku terminal 
+- Inserting wrong input i.e stringg instead of numebers and visa versa
+- Checking the google sheet for updated scores 
+
+
 ### Bugs 
+
 #### Fixed Bugs 
+
+- Before deployement 
+  - The user input was held by a while loop which in turn had a `TRY, EXCEPT, ELSE` statement for checking the user input and raising a custom error. Only in this way the scale from 1 - 10 could not also be validated so I had to change it to an proper `IF` statement. 
+- After deployment
+  - The rich import for adding colors inside the terminal was not picked up by the pip installment in the requirements.txt. This had to be added manually. 
+  - Due to an mistake in the code logic the main function was called twice in the programm meaning the form would repeat itself after first completion. This is corrected. 
+
+
 #### Unfixed Bugs 
+
+There are no remaining bugs. 
+
+
 ### Validator Testing 
+
+I have used a linter inside local terminal; pycodestyle 
+- No erros were found 
+
+
 ## Deployment 
+
+This project was deployed using Code Institute's mock terminal for Heroku 
+
+- Steps that have been taken; 
+  - Create respritory on github
+  - Create a Heroku App 
+  - Adding in crendtials needed for deployment 
+  - Add buildpack `Python` and `NodeJs` 
+  - Link the Heroku app to github repository 
+  - Then Deploy 
+
+
 ## Credits 
+
+- Code institute for the mock terminal 
+- Code institute for teaching me Python
+- Mentor for tipping me to style the mock terminal 
+- Slack channel where fellow students would help trouble shoot during denial of rich module afte deployment 
+- [Website for color pallet to be used with rich import]("https://rich.readthedocs.io/en/stable/appendix/colors.html")
+- The snippet of code that helped me check for range of input and type of input at the same time; 
+[Link to stack-overflow]("https://stackoverflow.com/questions/19821273/limiting-user-input-to-a-range-in-python")
+![picture of the code snippet]("")
