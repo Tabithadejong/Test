@@ -24,7 +24,7 @@ def introduction():
     """ 
 
     name = input("Enter your name:\n ")
-    print(f"Hi there [bold purple]{name}[/], welcome to our [bold orange3]Anger-Personality-Test[/]\n")
+    print(f"Hi there [bold purple]{name}[/], welcome to our [bold orange_red1]Anger-Personality-Test[/]\n")
     print("You will be asked a set of questions and your answer will need to be a number on the scale of 10")
     print("If at any time you would like to [red1]exit[/], just press [red1]q[/]")
     return name
@@ -35,7 +35,7 @@ def begin():
     Asks the player if he/she wants to start the game
     """ 
 
-    print("Are you ready to find out your [bold orange3]ANGER TYPE?[/]")
+    print("Are you ready to find out your [bold orange_red1]ANGER TYPE?[/]")
 
     start = input("y/n :\n")
     
@@ -43,7 +43,7 @@ def begin():
         print("Great well let's go\n")
     elif start == "n" : 
         print("Thats too bad, if you cange your mind let us know!")
-        main()
+        exit()
     else: 
         print("[white on red]Oh Oh, that is not a valid input[/]")
         begin()
@@ -166,30 +166,3 @@ def main():
     
     
 main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
