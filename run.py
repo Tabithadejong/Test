@@ -24,8 +24,9 @@ def introduction():
     """ 
 
     name = input("Enter your name:\n ")
-    print(f"Hi there [bold purple]{name}[/], welcome to our [bold orange_red1]Anger-Personality-Test[/]\n")
-    print("You will be asked a set of questions and your answer will need to be a number on the scale of 10")
+    print(f"Hi there [bold purple]{name}[/], welcome to our [bold dark_orange]Anger-Personality-Test[/]\n")
+    print("You will be prestented some real-life day to day situations.")
+    print("You will be asked to answer on a scale of 10.")
     print("If at any time you would like to [red1]exit[/], just press [red1]q[/]")
     return name
 
@@ -35,7 +36,7 @@ def begin():
     Asks the player if he/she wants to start the game
     """ 
 
-    print("Are you ready to find out your [bold orange_red1]ANGER TYPE?[/]")
+    print("Are you ready to find out your [bold dark_orange]ANGER TYPE?[/]")
 
     start = input("y/n :\n")
     
@@ -58,13 +59,13 @@ def quizz():
     """
     score = []
     questions = ("[bold black on light_salmon1] When your friend annoys you, do you tell him/her? [/]",
-     "[bold black on light_salmon1] When the waiter is rude, do you complain? [/]", 
-     "[bold black on light_salmon1] When the food comes out different than you ordered, will you send it back? [/]",
-      "[bold black on light_salmon1] Do you get frustrated while driving? [/]",
-       "[bold black on light_salmon1] Would you tell the truth even when it will hurt people? [/] ",
-       "[bold black on light_salmon1] When your employer gives you a useless assignment, would you refuse? [/]",
-       "[bold black on light_salmon1] When a customer is behaving like a spoiled brat, would you point this out? [/] ",
-       "[bold black on light_salmon1] Do you have arguments with your peers often? [/]")
+     "[bold black on light_pink1] When the waiter is rude, do you complain? [/]", 
+     "[bold black on light_pink1] When the food comes out different than you ordered, will you send it back? [/]",
+      "[bold black on light_pink1] Do you get frustrated while driving? [/]",
+       "[bold black on light_pink1] Would you tell the truth even when it will hurt people? [/] ",
+       "[bold black on light_pink1] When your employer gives you a useless assignment, would you refuse? [/]",
+       "[bold black on light_pink1] When a customer is behaving like a spoiled brat, would you point this out? [/] ",
+       "[bold black on light_pink1] Do you have arguments with your peers often? [/]")
 
     for q in questions: 
         value = get_answer(q)
