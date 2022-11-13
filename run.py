@@ -86,7 +86,7 @@ def get_answer(quest):
     print(" \n" + quest + " \n ") 
     print("Choose a number on a scale of 1 to 10.")
 
-    # thank god to stack overflow
+    # Credit to stack overflow for the outline of this while loop. 
 
     while True:
         answer = input("1 = Never 10 = Always:\n")
