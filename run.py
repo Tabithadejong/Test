@@ -63,14 +63,14 @@ def quizz():
     The loop will display the questions and answer input
     """
     score = []
-    questions = ("[bold black on hot_pink] When your friend annoys you, do you tell him/her? [/]",
-     "[bold black on hot_pink] When the waiter is rude, do you complain? [/]", 
-     "[bold black on hot_pink] When the food comes out different than you ordered, will you send it back? [/]",
-      "[bold black on hot_pink] Do you get frustrated while driving? [/]",
-       "[bold black on hot_pink] Would you tell the truth even when it will hurt people? [/] ",
-       "[bold black on hot_pink] When your employer gives you a useless assignment, would you refuse? [/]",
-       "[bold black on hot_pink] When a customer is behaving like a spoiled brat, would you point this out? [/] ",
-       "[bold black on hot_pink] Do you have arguments with your peers often? [/]")
+    questions = ("[bold hot_pink on white ] When your friend annoys you, do you tell him/her? [/]",
+     "[bold white  on hot_pink] When the waiter is rude, do you complain? [/]", 
+     "[bold hot_pink on white] When the food comes out different than you ordered, will you send it back? [/]",
+      "[bold white on hot_pink] Do you get frustrated while driving? [/]",
+       "[bold hot_pink on white ] Would you tell the truth even when it will hurt people? [/] ",
+       "[bold white  on hot_pink] When your employer gives you a useless assignment, would you refuse? [/]",
+       "[bold hot_pink on white ] When a customer is behaving like a spoiled brat, would you point this out? [/] ",
+       "[bold white  on hot_pink] Do you have arguments with your peers often? [/]")
 
     for q in questions: 
         value = get_answer(q)

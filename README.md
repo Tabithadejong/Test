@@ -40,6 +40,7 @@ The questionnaire is a list of day to day examples of situations that might trig
   - There is an option to reject storage
   - When agreed to storage the results will be logged to an external sheet
   ![picture of logging](/Project%203/loggin-external.png)
+  [link to external google sheet](https://docs.google.com/spreadsheets/d/1TPBrqt6P3OnMW8-xZrH7iUeI4-wXINa1XSxdpQsR8q8/edit#gid=0)
  
  
 ### Future Features
