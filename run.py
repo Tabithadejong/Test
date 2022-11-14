@@ -21,7 +21,9 @@ def introduction():
     """ 
     Displays a little introduction, 
     build a string litteral and, 
-    ask if the person would like to start the game
+    ask if the person would like to start the game.
+    Also stores the user name in a variable for later use.
+
     """ 
 
     name = input("Enter your name:\n ")
@@ -89,7 +91,7 @@ def get_answer(quest):
     print(" \n" + quest + " \n ") 
     print("Choose a number on a scale of 1 to 10.")
 
-    # Credit to stack overflow for the outline of this while loop. 
+    # Credit to stack overflow for the basic-outline of this while loop. 
 
     while True:
         answer = input("1 = Never 10 = Always:\n")

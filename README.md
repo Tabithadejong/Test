@@ -1,7 +1,7 @@
 # Anger Type Personality Test
 This Anger Type Personality test is a Python terminal, which runs in the Code Institute mock terminal on Heroku.
 It is a questionnaire which will track the user input to find out how they relate to anger within themselves.
-This is presented in a Mock terminal by Code Institute. 
+ 
  
 [Here is the link to the live version](https://anger-personality-test.herokuapp.com/)
 ![picture of collection](/Project%203/in-action.png)
@@ -97,6 +97,7 @@ This project was deployed using Code Institute's mock terminal for Heroku
  
 ## Credits
  
+
 - Code institute for the mock terminal
 - Code institute for teaching me Python
 - Mentor for tipping me to style the mock terminal
